@@ -1,59 +1,50 @@
-import { Component } from "react";
-import { GlobalStyle } from "GlobalStyle";
-import { FeedbackOptions } from "./Feedback/FeedbackOptions";
-import {Statistics} from './Statistics/Statistics'
-import {Section} from './Section/Section';
-import { Box } from "components/Box";
+import { Component } from 'react';
+import { GlobalStyle } from 'GlobalStyle';
+import { FeedbackOptions } from './Feedback/FeedbackOptions';
+import { Statistics } from './Statistics/Statistics';
+import { Section } from './Section/Section';
+import { Box } from 'components/Box';
 
-export class App extends Component  {
- 
-       state = {
-      
-      good: 0,
-      neutral: 0,
-      bad: 0
-  }
+export class App extends Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   // Метод стейта
 
   handleButton = option => {
-    this.setState ( prevState => ({
-      [option]: prevState[option] +1,
-    
-    })
-    )
+    this.setState(prevState => ({
+      [option]: prevState[option] + 1,
+    }));
   };
 
-
-  //  Тотал 
+  //  Тотал
   countTotalFeedback = () => {
-  const {good, neutral, bad} = this.state;
-  return good + neutral + bad;
-   };
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
 
-   // Процент 
+  // Процент
   countPositiveFeedbackPercentage = () => {
     const { good, neutral, bad } = this.state;
     const total = good + neutral + bad;
-    return total > 0 ? Math.round(100 / total * good) : 0;
-  }
+    return total > 0 ? Math.round((100 / total) * good) : 0;
+  };
 
-    render ()  {
-      
-      const keys = Object.keys(this.state);
-      const {good, neutral, bad} = this.state;
+  render() {
+    const keys = Object.keys(this.state);
+    const { good, neutral, bad } = this.state;
 
     return (
       <Box>
         <Section title="Please leave feedback">
-          <FeedbackOptions
-          options={keys}
-          onLeaveFeedback={this.handleButton}
-          />
+          <FeedbackOptions options={keys} onLeaveFeedback={this.handleButton} />
         </Section>
 
         <Section title="Statistics">
-          <Statistics 
+          <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
@@ -62,9 +53,8 @@ export class App extends Component  {
           />
         </Section>
 
-        <GlobalStyle/>
-       
+        <GlobalStyle />
       </Box>
-    )
-    }
+    );
   }
+}
