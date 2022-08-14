@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { GlobalStyle } from "GlobalStyle";
-import { FeedBackOptions } from "./Feedback/FeedbackOptions";
+import { FeedbackOptions } from "./Feedback/FeedbackOptions";
 import {Statistics} from './Statistics/Statistics'
 import {Section} from './Section/Section';
 import { Box } from "components/Box";
@@ -46,7 +46,7 @@ export class App extends Component  {
     return (
       <Box>
         <Section title="Please leave feedback">
-          <FeedBackOptions
+          <FeedbackOptions
           options={keys}
           onLeaveFeedback={this.handleButton}
           />

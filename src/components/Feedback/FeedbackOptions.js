@@ -1,7 +1,7 @@
 import { FeedbackList, FeedbackButton } from "./Feedback.styled";
 import PropTypes from 'prop-types';
 
-export const FeedBackOptions = ({ options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
              <FeedbackList>
                 {options.map(key => (
@@ -20,7 +20,7 @@ export const FeedBackOptions = ({ options, onLeaveFeedback }) => {
 
 
 
-FeedBackOptions.propTypes = {
+FeedbackOptions.propTypes = {
     options: PropTypes.array.isRequired,
     
 }

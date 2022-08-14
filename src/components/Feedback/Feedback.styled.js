@@ -7,7 +7,7 @@ grid-gap: ${p => p.theme.space[5]};
 `
 export const FeedbackButton = styled.button`
     cursor: pointer;
-    min-width: ${p => p.theme.sizes.xl};
+  
     padding: ${p => p.theme.space[3]}px;
     font-size: ${p => p.theme.fontSizes.l};
     text-transform: capitalize;
