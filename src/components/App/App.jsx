@@ -1,9 +1,10 @@
 import { Component } from 'react';
 import { GlobalStyle } from 'GlobalStyle';
-import { FeedbackOptions } from './Feedback/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
-import { Section } from './Section/Section';
+import { FeedbackOptions } from '../Feedback/FeedbackOptions';
+import { Statistics } from '../Statistics/Statistics';
+import { Section } from '../Section/Section';
 import { Box } from 'components/Box';
+
 
 export class App extends Component {
   state = {
@@ -41,14 +42,15 @@ export class App extends Component {
       <Box
         display="grid"
         m="auto"
-        pt="10px"
-        alightItems="center"
+        mt={6}
+        textAlign="center"
         border="2px solid "
         borderColor="greenhover"
         borderRadius="5px"
         bg="lightgreen"
-        width={360}
+        width={600}
         p={3}
+
       >
         <Section title="Please leave feedback">
           <FeedbackOptions options={keys} onLeaveFeedback={this.handleButton} />
