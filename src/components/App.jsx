@@ -38,7 +38,18 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <Box>
+      <Box
+        display="grid"
+        m="auto"
+        pt="10px"
+        alightItems="center"
+        border="2px solid "
+        borderColor="greenhover"
+        borderRadius="5px"
+        bg="lightgreen"
+        width={360}
+        p={3}
+      >
         <Section title="Please leave feedback">
           <FeedbackOptions options={keys} onLeaveFeedback={this.handleButton} />
         </Section>

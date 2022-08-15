@@ -38,7 +38,7 @@ export const Statistics = ({
       </ReviewItem>
     </ReviewList>
   ) : (
-    <Notification message="There is no feedback" />
+    <Notification message="No feedback given " />
   );
 };
 

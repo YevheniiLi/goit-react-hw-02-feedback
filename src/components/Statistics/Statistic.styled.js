@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ReviewList = styled.ul`
-  text-align: left;
+  text-align: center;
   padding-left: ${p => p.theme.space[5]}px;
 `;
 
