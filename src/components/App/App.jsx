@@ -5,7 +5,6 @@ import { Statistics } from '../Statistics/Statistics';
 import { Section } from '../Section/Section';
 import { Box } from 'components/Box';
 
-
 export class App extends Component {
   state = {
     good: 0,
@@ -44,13 +43,12 @@ export class App extends Component {
         m="auto"
         mt={6}
         textAlign="center"
-        border="2px solid "
+        border="4px solid "
         borderColor="greenhover"
         borderRadius="5px"
         bg="lightgreen"
         width={600}
         p={3}
-
       >
         <Section title="Please leave feedback">
           <FeedbackOptions options={keys} onLeaveFeedback={this.handleButton} />
