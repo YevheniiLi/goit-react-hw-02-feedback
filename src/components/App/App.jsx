@@ -3,8 +3,9 @@ import { GlobalStyle } from 'GlobalStyle';
 import { FeedbackOptions } from '../Feedback/FeedbackOptions';
 import { Statistics } from '../Statistics/Statistics';
 import { Section } from '../Section/Section';
-import { Notification } from 'components/Notification/Notification';
+// import { NotificationMessage } from 'components/Notification/Notification';
 import { Box } from 'components/Box';
+import { NotificationMessage } from 'components/Notification/Notification.styled';
 
 export class App extends Component {
   state = {
@@ -63,8 +64,9 @@ export class App extends Component {
             total={this.countTotalFeedback()}
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
+          <NotificationMessage message />
         </Section>
-        <Notification message/>
+
         <GlobalStyle />
       </Box>
     );
